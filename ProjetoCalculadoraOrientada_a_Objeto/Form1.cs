@@ -13,6 +13,7 @@ namespace ProjetoCalculadoraOrientada_a_Objeto
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -22,10 +23,15 @@ namespace ProjetoCalculadoraOrientada_a_Objeto
         {
             decimal a, b;
             a = decimal.Parse(txtNumero1.Text);
-            b = decimal.Parse(txtNumero2.Text);
-
+            if (txtNumero2.Text == "") { b = 0; }
+            else
+            {
+                b = decimal.Parse(txtNumero2.Text);
+            }
+            txtNumero2.Enabled = true;
             switch (cmbFunc.Text)
             {
+                
                 case "Somar":
                     {
                         CalculadoraBasica calc = new CalculadoraBasica();
@@ -58,9 +64,29 @@ namespace ProjetoCalculadoraOrientada_a_Objeto
                         lblResulatado.Text = calc.Dividir(a, b);
                         break;
                     }
+                case "ImparPar":
+                    {
+                        txtNumero2.Enabled = false;
+                        var calc = new CalculadoraCientifica();
+                        calc.Num1 = a;
+                        calc.Num2 = b;
+                        lblResulatado.Text = calc.Par_Impar();
+                        break;
+
+                    }
                 default:
                     break;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNumero1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

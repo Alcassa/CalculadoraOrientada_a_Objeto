@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjetoCalculadoraOrientada_a_Objeto;
 
 namespace ProjetoCalculadoraOrientada_a_Objeto.Classe
 {
@@ -14,12 +15,13 @@ namespace ProjetoCalculadoraOrientada_a_Objeto.Classe
         }
         public string Par_Impar()
         {
-            string texto="";
-            if (Num1 % 2 == 0)
+            string numero,num2;
+            if(Num1%2==0)
             {
+                return numero = "O primeiro é Par";
             }
-
-            return texto;
+            else { return numero = "O primeiro é Impar"; }
+            
         }
         public decimal Potenciacao()
         {

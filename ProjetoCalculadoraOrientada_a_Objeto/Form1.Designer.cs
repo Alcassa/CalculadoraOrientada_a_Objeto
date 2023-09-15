@@ -38,37 +38,34 @@
             // lblResulatado
             // 
             this.lblResulatado.AutoSize = true;
-            this.lblResulatado.Location = new System.Drawing.Point(401, 66);
-            this.lblResulatado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblResulatado.Location = new System.Drawing.Point(602, 102);
             this.lblResulatado.Name = "lblResulatado";
-            this.lblResulatado.Size = new System.Drawing.Size(13, 13);
+            this.lblResulatado.Size = new System.Drawing.Size(18, 20);
             this.lblResulatado.TabIndex = 0;
             this.lblResulatado.Text = "?";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(368, 66);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(552, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.Size = new System.Drawing.Size(18, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "=";
             // 
             // txtNumero1
             // 
-            this.txtNumero1.Location = new System.Drawing.Point(115, 64);
-            this.txtNumero1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumero1.Location = new System.Drawing.Point(172, 98);
             this.txtNumero1.Name = "txtNumero1";
-            this.txtNumero1.Size = new System.Drawing.Size(68, 20);
+            this.txtNumero1.Size = new System.Drawing.Size(100, 26);
             this.txtNumero1.TabIndex = 2;
+            this.txtNumero1.TextChanged += new System.EventHandler(this.TxtNumero1_TextChanged);
             // 
             // txtNumero2
             // 
-            this.txtNumero2.Location = new System.Drawing.Point(291, 64);
-            this.txtNumero2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumero2.Location = new System.Drawing.Point(436, 98);
             this.txtNumero2.Name = "txtNumero2";
-            this.txtNumero2.Size = new System.Drawing.Size(68, 20);
+            this.txtNumero2.Size = new System.Drawing.Size(100, 26);
             this.txtNumero2.TabIndex = 3;
             // 
             // cmbFunc
@@ -80,28 +77,27 @@
             "Subtrair",
             "Multiplicar",
             "Potenciação",
-            "Dividir1",
-            "Dividir2"});
-            this.cmbFunc.Location = new System.Drawing.Point(196, 62);
-            this.cmbFunc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            "Dividir",
+            "ImparPar"});
+            this.cmbFunc.Location = new System.Drawing.Point(294, 95);
             this.cmbFunc.Name = "cmbFunc";
-            this.cmbFunc.Size = new System.Drawing.Size(82, 21);
+            this.cmbFunc.Size = new System.Drawing.Size(121, 28);
             this.cmbFunc.TabIndex = 4;
             this.cmbFunc.SelectedIndexChanged += new System.EventHandler(this.CmbFunc_SelectedIndexChanged);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(752, 511);
             this.Controls.Add(this.cmbFunc);
             this.Controls.Add(this.txtNumero2);
             this.Controls.Add(this.txtNumero1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblResulatado);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
