@@ -72,7 +72,11 @@ namespace ProjetoCalculadoraOrientada_a_Objeto
                         calc.Num2 = b;
                         lblResulatado.Text = calc.Par_Impar();
                         break;
-
+                    }
+                case "Compara":
+                    {
+                        var calc = new CalculadoraCientifica();
+                        break;
                     }
                 default:
                     break;

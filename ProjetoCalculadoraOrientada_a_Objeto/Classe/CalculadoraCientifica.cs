@@ -7,26 +7,36 @@ using ProjetoCalculadoraOrientada_a_Objeto;
 
 namespace ProjetoCalculadoraOrientada_a_Objeto.Classe
 {
-    class CalculadoraCientifica: CalculadoraBasica
+    class CalculadoraCientifica : CalculadoraBasica
     {
-        public void Comparar()
+        public string Comparar()
         {
-
+            if (Num1 > Num2)
+            {
+                return Num1 + " é maior " + Num2;
+            }
+            else if (Num1 < Num2)
+            {
+                return Num1 + " é menor " + Num2;
+            }
+            else
+            {
+                return Num1 + " é igual " + Num2;
+            }
         }
         public string Par_Impar()
         {
-            string numero,num2;
-            if(Num1%2==0)
+            if (Num1 % 2 == 0)
             {
-                return numero = "O primeiro é Par";
+                return "É Par";
             }
-            else { return numero = "O primeiro é Impar"; }
-            
+            else { return "É Impar"; }
+
         }
         public decimal Potenciacao()
         {
             return 0;
         }
-         
+
     }
 }
