@@ -33,9 +33,13 @@ namespace ProjetoCalculadoraOrientada_a_Objeto.Classe
             else { return "É Impar"; }
 
         }
-        public decimal Potenciacao()
+        public double Potenciacao()
         {
-            return 0;
+            double result;
+            Convert.ToDouble(Num1);
+            Convert.ToDouble(Num2);
+            result=Math.Pow((double)Num1,(double)Num2);
+            return result;
         }
 
     }

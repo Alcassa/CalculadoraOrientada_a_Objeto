@@ -13,7 +13,7 @@ namespace ProjetoCalculadoraOrientada_a_Objeto
 {
     public partial class Form1 : Form
     {
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace ProjetoCalculadoraOrientada_a_Objeto
             txtNumero2.Enabled = true;
             switch (cmbFunc.Text)
             {
-                
+
                 case "Somar":
                     {
                         CalculadoraBasica calc = new CalculadoraBasica();
@@ -55,7 +55,6 @@ namespace ProjetoCalculadoraOrientada_a_Objeto
                         calc.Num1 = a;
                         calc.Num2 = b;
                         lblResulatado.Text = calc.Multiplicar().ToString();
-                        MessageBox.Show("Confirmar");
                         break;
                     }
                 case "Dividir1":
@@ -76,6 +75,19 @@ namespace ProjetoCalculadoraOrientada_a_Objeto
                 case "Compara":
                     {
                         var calc = new CalculadoraCientifica();
+                        calc.Num1 = a;
+                        calc.Num2 = b;
+                        lblResulatado.Text = calc.Comparar();
+                        break;
+                    }
+                case "Potenciação":
+                    {
+                        var calc = new CalculadoraCientifica();
+                        Convert.ToDouble(a);
+                        Convert.ToDouble(b);
+                        calc.Num1 = a;
+                        calc.Num2 = b;
+                        lblResulatado.Text = Convert.ToString(calc.Potenciacao());
                         break;
                     }
                 default:
